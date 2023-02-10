@@ -10,56 +10,54 @@
 
 ### Latihan 1
 
-Pada latihan 1 kita akan membuat program dengan syarat berikut:
-* `txt = 'Hello World'`
-* Hitung jumlah karakter
-* Ambil karakter terakhir
-* Ambil karakter indek ke-2 sampai index ke-4 (llo)
-* Hilangkan spasi pada text tersebut (HelloWorld)
-* Ubah text menjadi huruf besar
-* Ubah text menjadi huruf kecil
-* Ganti karakter H dengan karakter J
+![soal](gambar/1.png)
 
-### Program
-```python
-txt = 'Hello World'
-hitung = len(txt)
-terakhir = txt[-1]
-index = txt[2:5]
-hapus = txt.replace(' ', '')
-besar = txt.upper()
-kecil = txt.lower()
-ganti = txt.replace('H', 'J')
-
-print("Text \t\t\t\t\t: "+txt)
-print("Jumlah karakter \t\t\t:",hitung)
-print("Karakter terakhir \t\t\t: "+terakhir)
-print("Karakter index ke-2 sampai index ke-4 \t: "+index)
-print("Spasi dihilangkan \t\t\t: "+hapus)
-print("Huruf besar \t\t\t\t: "+besar)
-print("Huruf kecil \t\t\t\t: "+kecil)
-print("Ganti karakter H dengan karakter j \t: "+ganti)
+- Untuk menghitung jumlah karakter maka kita menggunakan fungsi len()
+``` python
+# Menghitung jumlah karakter
+print ("Jumlah karakter :", len(txt))
 ```
 
-### Hasil Output
-![Pinture output](picture/1.PNG)
+- Cara mengambil satu karakter pada string yaitu dengan menggunakan kurung siku [ ] dan deklarasi nomor di dalam kurung siku dengan urutan ARRAY dan menggunakan titik dua lalu masukan nomor ARRAY selanjutnya. Untuk mengambil karakter terakhir, gunakan index [-1]. Sedangkan untuk mengambil karakter index ke-2 sampai ke-4, gunakan index [2:5].
+``` python
+# Mengambil karakter terakhir
+print ("Karakter terakhir :", txt[10])
+# Mengambil karakter indeks ke-2 sampai indeks ke-4
+print ("Karakter indeks ke-2 sampai ke-4 :", txt[2:5])
+```
 
-### latihan 2
+- Jika ingin menghilangkan spasi pada string, gunakan method replace(). Method replace() mengganti semua kemunculan string lama dengan yang baru atau paling banyak kemunculan
+- Di dalam method replace, kita dapat menggunakan 2 cara, yang pertama bisa menggunakan (txt.replace(" ", "")) dan kedua dengan cara (txt.replace(txt[5], "")).
+``` python
+# Menghilangkan spasi
+print ("Hilangkan spasi :", txt.replace(" " , ""))
+```
 
-Pada latihan 2 kita akan melanjutkan program berikut:
-```python
+- Untuk mengubah huruf menjadi besar, gunakan method upper(),,
+Sedangkan jika ingin mengubah huruf menjadi kecil, gunakan method lower()
+``` python
+# Mengubah teks menjadi huruf besar
+print ("Ubah teks menjadi huruf besar :", txt.upper())
+# Mengubah teks menjadi huruf kecil
+print ("Ubah teks menjadi huruf kecil :", txt.lower())
+```
+
+- Untuk mengganti karakter 'H' dengan karakter 'J', gunakan method replace().
+``` python
+# Mengganti karakter
+print ("Ganti karakter H menjadi karakter J :", txt.replace('H','J' ))
+```
+
+### Latihan 2
+![soal](gambar/8.png)
+
+- Untuk memasukkan variable ke dalam string, tambahkan kurung kurawal {} untuk menempatkan variable sebelumnya.
+``` python
+# Melengkapi kode
 umur = 24
-txt = 'Hello, nama saya john, dan umur saya adalah .... tahun'
-
-print(txt.format(umur))
+text = 'Hello nama saya john, dan umur saya adalah {} tahun '
+print (text.format(umur))
 ```
 
-### Program
-```python
-umur = 24
-txt = 'Hello, nama saya john, dan umur saya adalah {} tahun'
-
-print(txt.format(umur))
-```
-### Hasil Output
-![Pinture output](picture/2.PNG)
+### Output Latihan 1 dan 2
+![run](gambar/latihan_string.png)
